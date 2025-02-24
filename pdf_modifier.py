@@ -29,10 +29,10 @@ def modify_pdf(filename, cpf, position, color, upload_folder):
   can.setFillColor(color)
   can.setFont("Helvetica",10)
   can.drawString(x, y, cpf)
-  can.save
+  can.save()
   
   try:
-    packet.seek(8)
+    packet.seek(0)
     new_pdf = PdfReader(packet)
     print(f'PDF com o CPF foi criado com sucesso')
     
